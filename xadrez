@@ -1,0 +1,18 @@
+
+#include <stdio.h>
+void moverBispo(int passo, int limite){
+    if(passo < limite) return;
+    printf("cima e direira - passo %d\n")
+            moverBiscoh(passo + 1, limite);
+}
+
+void moverTorre(int passo, int limite){
+    if(passo > limite) return;
+    printf("direita- passo %d\n",passo);
+    movertorre(passo + 1, limite);
+}
+
+    void moverRainha(int passo, int limite){
+        if(passo > limite) return;
+        printf("")
+    }
