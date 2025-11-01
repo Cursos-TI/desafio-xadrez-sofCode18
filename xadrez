@@ -3,7 +3,7 @@
 void moverBispo(int passo, int limite){
     if(passo < limite) return;
     printf("cima e direira - passo %d\n", passo);
-            moverBiscoh(passo + 1, limite);
+            moverBisco(passo + 1, limite);
 }
 
 void moverTorre(int passo, int limite){
