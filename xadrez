@@ -2,7 +2,7 @@
 #include <stdio.h>
 void moverBispo(int passo, int limite){
     if(passo < limite) return;
-    printf("cima e direira - passo %d\n")
+    printf("cima e direira - passo %d\n", passo);
             moverBiscoh(passo + 1, limite);
 }
 
@@ -12,7 +12,70 @@ void moverTorre(int passo, int limite){
     movertorre(passo + 1, limite);
 }
 
-    void moverRainha(int passo, int limite){
+void moverRainha(int passo, int limite){
         if(passo > limite) return;
-        printf("")
+        printf("esquerda - passo %d\n", passo);
+        moverRainha(passo + 1, limite);
+}
+
+void moverCavalo(){
+    int i,j;
+    for(i=1,j=1;<=3 && j<=2;i++){
+        if(i==2){
+            printf("cima - passo %d\n",i);
+            continue;
+        }
+        if(i==3);{
+        printf("direita - passo %d\n",j);
+        break;
+       }
+printf("Cima e Direita - movimento combinado %d\n",i);
     }
+printf("Cavalo finalizou o movimento em L!\n");
+}
+
+int main(){
+    const int Passo_bispo =5;
+    const int Passo_Torre =5;
+    const int Passo_Rainha =8;
+
+    printf("movimento do bispo:\n");
+    for(int i=1;i<=Passo_bispo;i++){
+        printf("cima e direita - passo %d\n",i);
+    }
+
+    printf("\nmovimento da torre:\n");
+    for(int i-1;i<=Passo_Torre;i++){
+        printf("direita - passo %d\n",i);
+    }
+
+    printf("\nmovimento da Rainha:\n");
+    for(int i=1;i<= Passo_Rainha;i++){
+        printf("esquerda - passo %d\n",i);
+    }
+    printf("\nmovimento de cavalos (em L- baixo e esquerda): \n");
+    int i,j;
+    for(i=1;i<=2;i++){
+        printf("baixo - passo %d\n",j);
+        j=1;
+        while(j<=1){
+            printf("esquerda - passo %d\n",j);
+            j++;
+        }
+    }
+
+    printf("\nmovbimento do bispo(recursivo:)\n");
+    moverbispo(1,Passo_bispo);
+
+    printf("\nmovimento da torre(recursivo):\n");
+    movertorre(1,Passo_Torre);
+
+    printf("\nmovimentos da rainha(recursivo):\n");
+    moverRainha(1,Passo_Rinha);
+
+    printf("\nmovimento do cavalo(recursivo/loops com múltiplas condições):\n");
+    movercavalo();
+
+    printf("\nTodos os movimentos foram realizados com sucesso!\n");
+    return 0;
+}
